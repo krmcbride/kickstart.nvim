@@ -164,6 +164,9 @@ vim.opt.scrolloff = 18
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
+-- km: Set a shortcut for Explore
+vim.keymap.set('n', '<leader>e', vim.cmd.Ex, { desc = 'Open directory listing' })
+
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
