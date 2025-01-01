@@ -90,6 +90,11 @@ P.S. You can delete this when you're done too. It's your config now! :)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+-- km: Replace netwr with nvim-tree
+-- See: https://github.com/nvim-tree/nvim-tree.lua?tab=readme-ov-file#setup
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
 
@@ -176,7 +181,8 @@ vim.opt.scrolloff = 18
 --  See `:help vim.keymap.set()`
 
 -- km: Set a shortcut for Explore
-vim.keymap.set('n', '<leader>e', vim.cmd.Ex, { desc = 'Open directory listing' })
+-- vim.keymap.set('n', '<leader>e', vim.cmd.Ex, { desc = 'Open directory listing' })
+vim.keymap.set('n', '<leader>e', vim.cmd.NvimTreeToggle, { desc = 'Open nvim tree' })
 
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
