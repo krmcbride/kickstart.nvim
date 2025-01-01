@@ -144,6 +144,9 @@ vim.opt.expandtab = true
 vim.opt.smartindent = true
 vim.opt.wrap = false
 
+-- km: enable 24 bit color
+vim.opt.termguicolors = true
+
 -- Decrease update time
 vim.opt.updatetime = 250
 
